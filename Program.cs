@@ -23,6 +23,10 @@ namespace timer
                 {
                     currentWorkInterval--;
                     workDuration--;
+                     if(workDuration == 0){
+                    Console.WriteLine("you have completed your duration");
+                    Console.ReadKey();
+                    }else
                     Console.WriteLine("your total work duration is: {0}secs, to rest in {1}secs ", workDuration, currentWorkInterval);
                 });
 
@@ -34,6 +38,9 @@ namespace timer
                 CountDown(restDuration, () =>
                 {
                     currentRestDuration--;
+                    if (currentRestDuration == 0){
+                        Console.WriteLine(" Your resting period is over\n");
+                        }else
                     Console.WriteLine("you have {0} seconds to rest", currentRestDuration);
                 });
                     rested = true;
