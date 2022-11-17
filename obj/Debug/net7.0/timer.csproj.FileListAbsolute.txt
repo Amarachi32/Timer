@@ -1,0 +1,15 @@
+C:\Users\CHINENYE\Desktop\timer\bin\Debug\net7.0\timer.exe
+C:\Users\CHINENYE\Desktop\timer\bin\Debug\net7.0\timer.deps.json
+C:\Users\CHINENYE\Desktop\timer\bin\Debug\net7.0\timer.runtimeconfig.json
+C:\Users\CHINENYE\Desktop\timer\bin\Debug\net7.0\timer.dll
+C:\Users\CHINENYE\Desktop\timer\bin\Debug\net7.0\timer.pdb
+C:\Users\CHINENYE\Desktop\timer\obj\Debug\net7.0\timer.csproj.AssemblyReference.cache
+C:\Users\CHINENYE\Desktop\timer\obj\Debug\net7.0\timer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CHINENYE\Desktop\timer\obj\Debug\net7.0\timer.AssemblyInfoInputs.cache
+C:\Users\CHINENYE\Desktop\timer\obj\Debug\net7.0\timer.AssemblyInfo.cs
+C:\Users\CHINENYE\Desktop\timer\obj\Debug\net7.0\timer.csproj.CoreCompileInputs.cache
+C:\Users\CHINENYE\Desktop\timer\obj\Debug\net7.0\timer.dll
+C:\Users\CHINENYE\Desktop\timer\obj\Debug\net7.0\refint\timer.dll
+C:\Users\CHINENYE\Desktop\timer\obj\Debug\net7.0\timer.pdb
+C:\Users\CHINENYE\Desktop\timer\obj\Debug\net7.0\timer.genruntimeconfig.cache
+C:\Users\CHINENYE\Desktop\timer\obj\Debug\net7.0\ref\timer.dll
