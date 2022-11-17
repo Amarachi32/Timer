@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace timer
 {
     class Program
@@ -10,42 +10,43 @@ namespace timer
             var workDuration = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter a RestTime duration in seconds: ");
             var restDuration = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter how long you will like to work before you rest: ");
+            Console.Write("Enter how long you willl like to work before you rest: ");
             var workInterval = Convert.ToInt32(Console.ReadLine());
-            bool rested = false;
 
-
-            while (workDuration >= 0)
+            Console.WriteLine("your total work duration is: {0}secs, resting period {1}secs ", workDuration, workInterval);
+            CountDown(workInterval, () =>
             {
-                var currentWorkInterval = workInterval;
-                Console.WriteLine("your total work duration is: {0}secs, resting period {1}secs ", workDuration, workInterval);
-                CountDown(Math.Min(workInterval, workDuration), () =>
-                {
-                    currentWorkInterval--;
-                    workDuration--;
-                     if(workDuration == 0){
-                    Console.WriteLine("you have completed your duration");
-                    Console.ReadKey();
-                    }else
-                    Console.WriteLine("your total work duration is: {0}secs, to rest in {1}secs ", workDuration, currentWorkInterval);
-                });
+                workInterval--;
+                workDuration--;
+                Console.WriteLine("your total work duration is: {0}secs, to rest in {1}secs ", workDuration, workInterval);
 
-                if (workDuration <= 0) break;
-                
-                if (!rested){
-                var currentRestDuration = restDuration;
-                Console.WriteLine("you have {0} seconds to rest", currentRestDuration);
-                CountDown(restDuration, () =>
+            });
+
+            Console.WriteLine("you have {0} seconds to rest", restDuration);
+            CountDown(restDuration, () =>
+            {
+
+                restDuration--;
+                if (restDuration == 0)
                 {
-                    currentRestDuration--;
-                    if (currentRestDuration == 0){
-                        Console.WriteLine(" Your resting period is over\n");
-                        }else
-                    Console.WriteLine("you have {0} seconds to rest", currentRestDuration);
-                });
-                    rested = true;
-                }
-            }
+                    Console.WriteLine("\n your resting period is over\n");
+                }else
+                Console.WriteLine("you have {0} seconds to rest", restDuration);
+            });
+
+            Console.WriteLine("your total work duration is: {0}secs", workDuration);
+            CountDown(workDuration, () =>
+            {
+                workDuration--;
+                if (workDuration == 0)
+                {
+                    Console.WriteLine("\n you have completed your duration");
+                    Console.ReadKey();
+                }else
+                Console.WriteLine("your total work duration is: {0}secs", workDuration);
+
+            });
+
 
 
         }
@@ -76,6 +77,7 @@ namespace timer
 
     }
 }
+
 
 
 
