@@ -10,8 +10,9 @@ namespace timer
             var workDuration = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter a RestTime duration in seconds: ");
             var restDuration = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter how long you willl like to work before you rest: ");
+            Console.Write("Enter how long you will like to work before you rest: ");
             var workInterval = Convert.ToInt32(Console.ReadLine());
+            bool rested = false;
 
 
             while (workDuration >= 0)
@@ -26,7 +27,8 @@ namespace timer
                 });
 
                 if (workDuration <= 0) break;
-
+                
+                if (!rested){
                 var currentRestDuration = restDuration;
                 Console.WriteLine("you have {0} seconds to rest", currentRestDuration);
                 CountDown(restDuration, () =>
@@ -34,6 +36,8 @@ namespace timer
                     currentRestDuration--;
                     Console.WriteLine("you have {0} seconds to rest", currentRestDuration);
                 });
+                    rested = true;
+                }
             }
 
 
